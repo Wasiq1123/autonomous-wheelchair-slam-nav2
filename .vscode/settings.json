@@ -1,0 +1,15 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/wasiq/testing_model/my_thesis/install/teleop_twist_keyboard/lib/python3.10/site-packages",
+        "/home/wasiq/testing_model/my_thesis/install/nav2_simple_commander/lib/python3.10/site-packages",
+        "/home/wasiq/testing_model/my_thesis/install/detection/lib/python3.10/site-packages",
+        "/home/wasiq/testing_model/my_thesis/install/action/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "cmake.sourceDirectory": "/home/wasiq/testing_model/WheelChair_Slam/src/bt_ros2"
+}

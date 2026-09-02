@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+
+<robot name="WheelChair">
+
+  <link name="base_footprint"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0150225168140311 -0.00045756544585393 -0.0296540042451046"
+        rpy="0 0 0" />
+      <mass
+        value="0.643906219788564" />
+      <inertia
+        ixx="0.00139843888276529"
+        ixy="-1.09775595967335E-05"
+        ixz="-0.000165046922808804"
+        iyy="0.00279034265894324"
+        iyz="-1.79958558445924E-05"
+        izz="0.00229515693735372" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_link_joint" type="fixed">
+    <parent
+      link="base_link" />
+    <child
+      link="base_footprint" />
+  </joint>
+
+  <link
+    name="left_upper">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0163140989716186"
+        rpy="0 0 0" />
+      <mass
+        value="0.0130053096491487" />
+      <inertia
+        ixx="3.40560775044509E-06"
+        ixy="-2.49816770423389E-22"
+        ixz="1.84563888321289E-22"
+        iyy="2.37611866740339E-06"
+        iyz="-1.2469088008161E-21"
+        izz="1.83753156023489E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/left_upper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/left_upper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_upper_joint"
+    type="continuous">
+    <origin
+      xyz="0.080046 0.04129 -0.097"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_upper" />
+    <axis
+      xyz="0.020974 0.026505 0.99943" />
+  </joint>
+  <link
+    name="right_upper">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0163140989716187"
+        rpy="0 0 0" />
+      <mass
+        value="0.0130053096491487" />
+      <inertia
+        ixx="3.40560775044508E-06"
+        ixy="-6.91653432661221E-22"
+        ixz="-2.86232894587008E-22"
+        iyy="2.37611866740339E-06"
+        iyz="-1.74362809688445E-22"
+        izz="1.83753156023488E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/right_upper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/right_upper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_upper_joint"
+    type="continuous">
+    <origin
+      xyz="0.080046 -0.041273 -0.097"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_upper" />
+    <axis
+      xyz="0.020974 -0.026505 0.99943" />
+  </joint>
+  <link
+    name="left_caster">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 0 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0102918575331602" />
+      <inertia
+        ixx="9.08256427301386E-07"
+        ixy="2.51890208012093E-22"
+        ixz="-2.03151681033902E-22"
+        iyy="1.56950827380693E-06"
+        iyz="-5.83772152160978E-23"
+        izz="9.08256427301385E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/left_caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/left_caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_caster_joint"
+    type="continuous">
+    <origin
+      xyz="0.080046 0.04029 -0.129"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_caster" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_caster">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0102918575331602" />
+      <inertia
+        ixx="9.08256427301386E-07"
+        ixy="2.76692198501435E-22"
+        ixz="-2.03151681033902E-22"
+        iyy="1.56950827380693E-06"
+        iyz="-8.49593657010826E-23"
+        izz="9.08256427301385E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/right_caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/right_caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_caster_joint"
+    type="continuous">
+    <origin
+      xyz="0.080046 -0.042273 -0.129"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_caster" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_rear">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 0 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0725605361395028" />
+      <inertia
+        ixx="3.14770798436754E-05"
+        ixy="8.30285764969279E-21"
+        ixz="1.87278860560834E-23"
+        iyy="6.02331395821193E-05"
+        iyz="1.052251670425E-23"
+        izz="3.14770798436753E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/left_rear.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/left_rear.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_joint"
+    type="continuous">
+    <origin
+      xyz="-0.067014 0.05441 -0.1063"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_rear" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_rear">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 0 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0725605361395028" />
+      <inertia
+        ixx="3.14770798436754E-05"
+        ixy="3.11239138979268E-21"
+        ixz="-2.35953269730751E-22"
+        iyy="6.02331395821194E-05"
+        iyz="-1.07293118573882E-23"
+        izz="3.14770798436753E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/right_rear.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/right_rear.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear_joint"
+    type="continuous">
+    <origin
+      xyz="-0.067014 -0.054393 -0.1063"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_rear" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0005"
+        rpy="0 0 0" />
+      <mass
+        value="4.45418255697437E-05" />
+      <inertia
+        ixx="2.81444179604292E-10"
+        ixy="1.37340003196164E-25"
+        ixz="5.36559117913478E-28"
+        iyy="1.02131753709743E-10"
+        iyz="1.55024364592781E-26"
+        izz="3.76152295719077E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/wasiq/testing_model/WheelChair_Slam/src/megabot/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.164744758831809 -0.00130643220935189 -0.048"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="camera_depth_link"/>
+  <joint name="camera_depth_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="camera"/>
+    <child link="camera_depth_link"/>
+  </joint>
+
+  <gazebo>
+    <plugin filename="libgazebo_ros_diff_drive.so" name="skid_steer_drive_controller">
+      <ros>
+        <argument>/cmd_vel:=cmd_vel</argument>
+      </ros>
+      <update_rate>400.0</update_rate>
+      <num_wheel_pairs>2</num_wheel_pairs>
+      <odometry_frame>odom</odometry_frame>
+      <left_joint>left_upper_joint</left_joint>
+      <left_joint>left_rear_joint</left_joint>
+      <wheel_separation>0.3</wheel_separation>
+      <wheel_diameter>0.1</wheel_diameter>
+      <right_joint>right_upper_joint</right_joint>
+      <right_joint>right_rear_joint</right_joint>
+      <wheel_separation>0.3</wheel_separation>
+      <wheel_diameter>0.1</wheel_diameter>
+      <robot_base_frame>base_link</robot_base_frame>
+      <max_wheel_torque>20</max_wheel_torque>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <!-- <odometry_source>odom</odometry_source> -->
+    </plugin>
+  </gazebo>
+
+    <!-- ┐(´～｀)┌ Joint state publisher ┐(´～｀)┌ -->
+    
+  <gazebo>
+
+      <plugin name='risewheelchair_joint_state' filename='libgazebo_ros_joint_state_publisher.so'>
+        <ros>
+          <remapping>~/out:=joint_states</remapping>
+        </ros>
+        <update_rate>400.0</update_rate>
+        <joint_name>left_rear_joint</joint_name>
+        <joint_name>right_rear_joint</joint_name>
+        <joint_name>left_upper_joint</joint_name>
+        <joint_name>right_upper_joint</joint_name>
+        <joint_name>left_caster_joint</joint_name>
+        <joint_name>right_caster_joint</joint_name>
+      </plugin>
+    </gazebo>
+
+  <gazebo reference="camera">
+    <sensor name="rp_lidar_a1" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>100</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.485</min_angle>
+            <max_angle>1.485</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>10.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <update_rate>30</update_rate>
+      <plugin name="neuronbot2_laserscan" filename="libgazebo_ros_ray_sensor.so">
+          <ros>
+            <remapping>~/out:=scan</remapping>
+          </ros>
+          <output_type>sensor_msgs/LaserScan</output_type>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="camera">
+    <sensor name="camera" type="rgbd_camera">
+      <visualize>true</visualize>
+      <update_rate>100.0</update_rate>
+      <topic>camera</topic>
+      <camera name="camera">
+        <horizontal_fov>1.047198</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>3</far>
+        </clip>
+      </camera>
+      <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+        <baseline>0.2</baseline>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <frame_name>camera_depth_link</frame_name>
+        <pointCloudCutoff>0.5</pointCloudCutoff>
+        <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+        <distortionK1>0</distortionK1>
+        <distortionK2>0</distortionK2>
+        <distortionK3>0</distortionK3>
+        <distortionT1>0</distortionT1>
+        <distortionT2>0</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0</Cx>
+        <Cy>0</Cy>
+        <focalLength>0</focalLength>
+        <hackBaseline>0</hackBaseline>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>
