@@ -123,6 +123,12 @@ This project combines **mechanical engineering** (SolidWorks CAD and robot model
 
 ---
 
+## Project Demonstration
+
+A demonstration of the project can be viewed [here](https://huggingface.co/datasets/WasiqSaleem/robotics-project-demonstrations/tree/main).
+
+---
+
 ## Acknowledgments
 
 The SLAM and Nav2 launch/parameter structure in `megabot_nav` (mapping → localization → navigation as separate, composable launch files; the AMCL/costmap/BT-navigator parameter layout in `mws_params.yaml`) builds on the pattern established by ADLINK Technology's **[NeuronBot2](https://github.com/Adlink-ROS/neuronbot2)** project — `bt_ros2`, included in this repo, is NeuronBot2's Behavior Tree layer over Nav2, adapted here to drive this wheelchair's own goals instead. `nav2_bringup` and `nav2_simple_commander` are from the [Nav2 project](https://github.com/ros-navigation/navigation2). `slam_gmapping`/`openslam_gmapping` is the standard ROS 2 port of OpenSLAM's GMapping. `aws_robomaker_small_warehouse_world` is from [AWS RoboMaker](https://github.com/aws-robotics/aws-robomaker-small-warehouse-world). The YOLOv8 detection node builds on [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics); `yolobot_recognition` builds on [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5) (GPL-3.0 — check licensing terms before redistributing).
